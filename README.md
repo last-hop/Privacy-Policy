@@ -55,17 +55,18 @@ git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
 git push -u origin main
 ```
 
-### Step 3: Turn on GitHub Pages
+### Step 3: Turn on GitHub Pages (If not already enabled)
 
-1. Go to your repository on GitHub.
+1. Open your repository on GitHub: [https://github.com/last-hop/Privacy-Policy](https://github.com/last-hop/Privacy-Policy)
 2. Click **Settings** (tab at the top).
 3. On the left sidebar, click **Pages**.
-4. Under **Build and deployment**:
-   - **Source**: Select `Deploy from a branch`.
-   - **Branch**: Select `main` and folder `/(root)`.
-5. Click **Save**.
-6. Wait 1–2 minutes. GitHub will display:
-   > *Your site is live at `https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/`*
+4. Under **Build and deployment > Source**:
+   - Option A (**GitHub Actions**): Select **GitHub Actions** (the included `.github/workflows/deploy.yml` will deploy automatically).
+   - Option B (**Deploy from a branch**): Select branch **`main`** and folder **`/(root)`**, then click **Save**.
+5. Your portal will be live at:
+   ```text
+   https://last-hop.github.io/Privacy-Policy/
+   ```
 
 ---
 
@@ -76,22 +77,22 @@ git push -u origin main
    **Policy and programs > App content > Privacy Policy**.
 2. Paste the specific URL for your app:
    ```text
-   https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/?app=<your-app-id>
+   https://last-hop.github.io/Privacy-Policy/?app=<your-app-id>
    ```
 3. For the **Data Deletion URL** requirement (if your app supports user accounts):
    ```text
-   https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/?app=<your-app-id>#retention-deletion
+   https://last-hop.github.io/Privacy-Policy/?app=<your-app-id>#retention-deletion
    ```
 
 ### Apple App Store Connect
 1. In App Store Connect, go to **App Information > General Information**.
 2. In the **Privacy Policy URL** field, paste:
    ```text
-   https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/?app=<your-app-id>
+   https://last-hop.github.io/Privacy-Policy/?app=<your-app-id>
    ```
 3. In the **Terms of Use (EULA)** field (if applicable):
    ```text
-   https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/terms.html?app=<your-app-id>
+   https://last-hop.github.io/Privacy-Policy/terms.html?app=<your-app-id>
    ```
 
 ---

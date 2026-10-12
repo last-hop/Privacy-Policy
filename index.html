@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Digital Applications & Services</title>
+  <meta name="description" content="Official Privacy Policy and data protection terms for mobile applications and services. Comprehensive GDPR, CCPA, Google Play, and Apple App Store compliance.">
+  
+  <!-- Modern Clean Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="navbar" id="top-navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Privacy Policy Home">
+        <svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+        <span class="dev-name">App Studio</span>
+        <span class="brand-badge">Privacy Center</span>
+      </a>
+
+      <div class="nav-actions">
+        <!-- App Selector Dropdown -->
+        <div class="app-selector-wrapper">
+          <label for="app-selector" class="app-select-label">Select App:</label>
+          <select id="app-selector" class="app-dropdown" aria-label="Select Application">
+            <!-- Dynamically populated from apps-config.js -->
+          </select>
+        </div>
+
+        <!-- Print Action -->
+        <button id="print-btn" class="btn" title="Print or save as PDF" aria-label="Print policy">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+          </svg>
+          <span>PDF / Print</span>
+        </button>
+
+        <!-- Theme Mode Toggle -->
+        <button id="theme-toggle-btn" class="btn btn-icon-only" title="Toggle Dark/Light Mode" aria-label="Toggle dark and light theme">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="main-wrapper">
+    
+    <!-- Sidebar (Sticky Navigation & Meta) -->
+    <aside class="sidebar">
+      
+      <!-- Current Application Meta Card -->
+      <div class="sidebar-card app-meta-box">
+        <div class="app-badge-row">
+          <span class="category-badge" id="sidebar-category">General</span>
+          <span class="verified-badge">
+            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            Verified Compliance
+          </span>
+        </div>
+        <h2 class="sidebar-app-title" id="sidebar-app-title">Application Policy</h2>
+        <p class="sidebar-app-tagline" id="sidebar-app-tagline">Loading policy details...</p>
+
+        <ul class="compliance-check-list">
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            Google Play Policy Ready
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            Apple App Store Compliant
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            GDPR & CCPA Aligned
+          </li>
+        </ul>
+      </div>
+
+      <!-- App Store Deep Link Tool -->
+      <div class="sidebar-card share-tool-box">
+        <span class="share-tool-label">App Store / Play Console URL</span>
+        <p style="font-size: 0.785rem; color: var(--text-subtle); margin: 0;">
+          Direct link to paste into Google Play Console & App Store listing:
+        </p>
+        <div class="share-url-container">
+          <input type="text" id="share-url-input" class="share-url-input" readonly aria-label="Direct policy URL">
+          <button id="copy-link-btn" class="btn btn-primary" title="Copy Link" style="padding: 0.35rem 0.65rem;">
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <nav class="sidebar-card toc-card" aria-label="Table of Contents">
+        <h3 class="toc-title">Table of Contents</h3>
+        <ul class="toc-list">
+          <li><a href="#overview" class="toc-link">1. Overview & Scope</a></li>
+          <li><a href="#controller" class="toc-link">2. Developer & Controller</a></li>
+          <li><a href="#data-collection" class="toc-link">3. Data We Collect</a></li>
+          <li><a href="#permissions" class="toc-link">4. Device Permissions</a></li>
+          <li><a href="#third-party" class="toc-link">5. Third-Party SDKs</a></li>
+          <li><a href="#usage" class="toc-link">6. How We Use Data</a></li>
+          <li><a href="#retention-deletion" class="toc-link">7. Deletion Requests</a></li>
+          <li><a href="#children" class="toc-link">8. Children's Privacy</a></li>
+          <li><a href="#security" class="toc-link">9. Data Security</a></li>
+          <li><a href="#rights" class="toc-link">10. User Rights (GDPR/CCPA)</a></li>
+          <li><a href="#changes" class="toc-link">11. Policy Changes</a></li>
+          <li><a href="#contact" class="toc-link">12. Contact Developer</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content-wrapper">
+
+      <!-- Header Hero -->
+      <header class="policy-hero">
+        <div class="hero-pill-bar">
+          <span class="hero-pill">Official Legal Document</span>
+          <span class="hero-pill" id="app-category">Application</span>
+        </div>
+        <h1 class="hero-title" id="app-title">Privacy Policy</h1>
+        <p class="hero-subtitle" id="app-tagline">
+          Transparency and privacy are core to how our applications are developed.
+        </p>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span class="meta-label">Publisher</span>
+            <span class="meta-value dev-name">Developer Studio</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Effective Date</span>
+            <span class="meta-value" id="effective-date">January 1, 2026</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Last Updated</span>
+            <span class="meta-value" id="last-updated">October 12, 2026</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Status</span>
+            <span class="meta-value" style="color: var(--success);">Active & Enforceable</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Executive Summary Alert Box -->
+      <div class="summary-alert">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <div class="summary-alert-content">
+          <h4>Policy Summary & Intent</h4>
+          <p id="summary-text">
+            This Privacy Policy explains how we collect, store, and process your information when you download, install, or interact with our software applications.
+          </p>
+        </div>
+      </div>
+
+      <!-- App-Specific Custom Notes (Dynamic) -->
+      <div id="custom-notes-box" class="callout-box" style="display: none;">
+        <h4>
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          Important Note Regarding This Application
+        </h4>
+        <p id="custom-notes-text"></p>
+      </div>
+
+      <!-- Section 1: Overview & Scope -->
+      <section class="policy-section" id="overview">
+        <span class="section-number">Section 01</span>
+        <h2>Overview & Scope</h2>
+        <p>
+          This Privacy Policy governs your use of software applications created and published by <strong class="dev-name">Our Studio</strong> ("we", "us", or "our"). 
+          It applies universally to mobile, desktop, and web applications developed under our developer account, as well as specific terms highlighted for each configured application.
+        </p>
+        <p>
+          By downloading, installing, accessing, or using this application, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with the terms outlined herein, please refrain from using our software and uninstall the application from your device.
+        </p>
+      </section>
+
+      <!-- Section 2: Data Controller & Developer Identity -->
+      <section class="policy-section" id="controller">
+        <span class="section-number">Section 02</span>
+        <h2>Data Controller & Developer Identity</h2>
+        <p>
+          For the purposes of the EU General Data Protection Regulation (GDPR), the UK Data Protection Act, and applicable state privacy statutes (such as CCPA/CPRA), the entity responsible for data processing is:
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </div>
+            <div>
+              <h4>Entity / Developer</h4>
+              <p class="dev-name">Developer Name</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4>Privacy Inquiries</h4>
+              <a href="#" class="dev-email">support@yourdomain.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <div>
+              <h4>Official Website</h4>
+              <a href="#" class="dev-website" target="_blank" rel="noopener">Website</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Data We Collect -->
+      <section class="policy-section" id="data-collection">
+        <span class="section-number">Section 03</span>
+        <h2>Information Collection & Categories of Data</h2>
+        <p>
+          We adhere to principles of <strong>data minimization</strong>. We only gather information strictly necessary to provide reliable application functionality, prevent software crashes, and fulfill legitimate operational needs.
+        </p>
+
+        <!-- Dynamically rendered data cards -->
+        <div id="data-collected-grid" class="data-card-grid"></div>
+
+        <div id="account-policy-content">
+          <!-- Dynamic account info -->
+        </div>
+      </section>
+
+      <!-- Section 4: Device Permissions -->
+      <section class="policy-section" id="permissions">
+        <span class="section-number">Section 04</span>
+        <h2>Device & Operating System Permissions</h2>
+        <p>
+          To perform specific actions (e.g. notifications, hardware access, or network syncing), our application may request access to particular device capabilities. Permissions are only accessed after you provide explicit operating system consent.
+        </p>
+        <div id="permissions-container">
+          <!-- Dynamic list of permissions -->
+        </div>
+        <p>
+          You can audit, toggle, or revoke any granted permissions at any time through your mobile device settings (e.g., <em>Settings &gt; Apps &gt; [App Name] &gt; Permissions</em> on Android, or <em>Settings &gt; Privacy</em> on iOS).
+        </p>
+      </section>
+
+      <!-- Section 5: Third-Party SDKs & Services -->
+      <section class="policy-section" id="third-party">
+        <span class="section-number">Section 05</span>
+        <h2>Third-Party Services & Software Development Kits (SDKs)</h2>
+        <p>
+          We integrate reputable third-party SDKs to handle system services, analytics, crash debugging, or monetization. These external providers may collect anonymous identifiers governed by their individual privacy policies. Below are the providers active for this application:
+        </p>
+        <div id="third-party-grid" class="services-grid">
+          <!-- Dynamic cards populated by script.js -->
+        </div>
+      </section>
+
+      <!-- Section 6: How We Use Data -->
+      <section class="policy-section" id="usage">
+        <span class="section-number">Section 06</span>
+        <h2>How We Use & Process Information</h2>
+        <p>We process collected telemetry and technical logs under the following lawful bases:</p>
+        <ul>
+          <li><strong>Application Functionality & Performance:</strong> To maintain seamless runtime execution, save user preferences, and deliver core features.</li>
+          <li><strong>Diagnostics & Crash Resolution:</strong> To analyze stack traces, memory leaks, and operating system incompatibilities to deliver software updates and patches.</li>
+          <li><strong>Security & Abuse Prevention:</strong> To protect our infrastructure and users against malicious attacks, fraud, and terms violations.</li>
+          <li><strong>Compliance with Legal Obligations:</strong> To comply with binding legal requests, court orders, or applicable regulations.</li>
+        </ul>
+        <div class="callout-box success">
+          <h4>No Sale of Personal Information</h4>
+          <p>We do not sell, rent, lease, or monetize your personal data to third-party data aggregators or brokers under any circumstance.</p>
+        </div>
+      </section>
+
+      <!-- Section 7: Data Retention & User Data Deletion Instructions (Google Play Requirement) -->
+      <section class="policy-section" id="retention-deletion">
+        <span class="section-number">Section 07</span>
+        <h2>Data Retention & User Data Deletion Requests</h2>
+        <p>
+          We retain diagnostic logs and telemetry only for as long as necessary to address software stability (typically a rolling cycle of 30 to 90 days), after which logs are permanently deleted or irreversibly anonymized.
+        </p>
+
+        <!-- Google Play compliant Data Deletion Step-by-Step Box -->
+        <div class="deletion-box">
+          <h4>
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Data Deletion Procedure (App Store & Google Play Requirement)
+          </h4>
+          <p id="deletion-content">
+            You hold the right to request deletion of any telemetry, account data, or stored profile info associated with you.
+          </p>
+          <ol class="deletion-steps">
+            <li>Submit an email request to <strong class="dev-email">support@yourdomain.com</strong> with the subject line <code>Data Deletion Request - [App Name]</code>.</li>
+            <li>Provide your app installation ID, registered email address, or advertising ID (accessible from your device settings).</li>
+            <li>Our support team will process the request, purge all matching database entries, and confirm deletion within 30 calendar days.</li>
+          </ol>
+          <p style="font-size: 0.85rem; color: var(--text-subtle); margin: 0;">
+            Note: For account-free apps operating purely on-device, simply clearing the app cache/storage or uninstalling the app permanently purges all local data.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 8: Children's Privacy -->
+      <section class="policy-section" id="children">
+        <span class="section-number">Section 08</span>
+        <h2>Children's Privacy Protection (COPPA & GDPR-K)</h2>
+        <div id="children-policy-content">
+          <!-- Dynamic children's policy -->
+        </div>
+      </section>
+
+      <!-- Section 9: Data Security Safeguards -->
+      <section class="policy-section" id="security">
+        <span class="section-number">Section 09</span>
+        <h2>Security Standards & Safeguards</h2>
+        <p>
+          We implement industry-standard technical and organizational security controls to protect your data against unauthorized access, alteration, disclosure, or destruction. These safeguards include:
+        </p>
+        <ul>
+          <li><strong>Transport Layer Security:</strong> All client-server communications are encrypted in transit using industry-standard TLS / HTTPS encryption.</li>
+          <li><strong>Sandboxed Storage:</strong> On-device databases utilize encrypted file storage where applicable and operate inside operating system sandboxes.</li>
+          <li><strong>Access Restrictions:</strong> Administrative access to analytics dashboards is strictly restricted through multi-factor authentication (MFA) and least-privilege principles.</li>
+        </ul>
+        <p>
+          While we strive to employ commercially acceptable means to protect information, please remember that no method of transmission over the internet or method of electronic storage is 100% secure.
+        </p>
+      </section>
+
+      <!-- Section 10: User Rights (GDPR & CCPA) -->
+      <section class="policy-section" id="rights">
+        <span class="section-number">Section 10</span>
+        <h2>Your Privacy Rights & Controls</h2>
+        <p>
+          Depending on your jurisdiction (such as the European Economic Area, the United Kingdom, California, or other US states), you possess statutory privacy rights:
+        </p>
+        <div class="rights-grid">
+          <div class="right-card">
+            <h4>Right of Access</h4>
+            <p>Request confirmation of whether we process your data and receive a copy of your records.</p>
+          </div>
+          <div class="right-card">
+            <h4>Right to Rectification</h4>
+            <p>Request correction of inaccurate or incomplete personal records held by us.</p>
+          </div>
+          <div class="right-card">
+            <h4>Right to Erasure ("To Be Forgotten")</h4>
+            <p>Request permanent deletion of your data when retention is no longer justified.</p>
+          </div>
+          <div class="right-card">
+            <h4>Right to Restrict or Object</h4>
+            <p>Object to processing based on legitimate interests or request processing limitations.</p>
+          </div>
+          <div class="right-card">
+            <h4>Non-Discrimination</h4>
+            <p>Exercise your privacy rights without fear of penalty, pricing changes, or degraded service.</p>
+          </div>
+          <div class="right-card">
+            <h4>Opt-Out of Targeted Ads</h4>
+            <p>Disable personalized advertising directly in your Android or iOS device settings.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 11: Changes to This Privacy Policy -->
+      <section class="policy-section" id="changes">
+        <span class="section-number">Section 11</span>
+        <h2>Updates & Modifications to This Policy</h2>
+        <p>
+          We may update our Privacy Policy periodically to reflect changes in our applications, technology, legal frameworks, or operational practices. 
+          When revisions occur, we will update the "Last Updated" date at the top of this document.
+        </p>
+        <p>
+          For material changes, we may provide prominent notice (such as an in-app notice, banner, or release notes update). We encourage you to review this page periodically to remain informed about our data handling practices.
+        </p>
+      </section>
+
+      <!-- Section 12: Contact Us -->
+      <section class="policy-section" id="contact">
+        <span class="section-number">Section 12</span>
+        <h2>Contact Information & Privacy Officer</h2>
+        <p>
+          If you have questions, feedback, or concerns regarding this Privacy Policy or wish to exercise your data rights, please contact us:
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4>Email Support</h4>
+              <a href="#" class="dev-email">support@yourdomain.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <h4>Mailing / Address</h4>
+              <p class="dev-address">Remote Studio</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-nav">
+        <a href="index.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="#top-navbar">Back to Top ↑</a>
+      </div>
+      <p>
+        &copy; 2026 <span class="dev-name">Developer Studio</span>. All rights reserved. 
+        Hosted securely via GitHub Pages.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="copy-toast" class="copy-toast" role="status" aria-live="polite">
+    Copied to clipboard!
+  </div>
+
+  <!-- Scripts -->
+  <script src="apps-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
